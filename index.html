@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Function map</title>
+</head>
+<body>
+	<script>
+		const map = function(array, foo) {
+			const result = [];
+
+			for (let i = 0; i < array.length; i++) {
+				result.push(foo(array[i], i, array));
+
+			}
+			return result;
+		}
+	
+		const newArray = ['first', 'second', 'third'];
+		
+		const addNewWord = function(word) {
+			return word + ' ' + 'apple';
+		}
+
+		console.log(map(newArray, addNewWord));
+		
+	</script>
+</body>
+</html>
